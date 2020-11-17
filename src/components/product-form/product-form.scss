@@ -1,0 +1,162 @@
+.product-form {
+	width: 420px;
+}
+.offers__item {
+	position: relative;
+	width: 400px;
+	height: 690px;
+	padding: 10px 10px 0 10px;
+	&:hover {
+		color: white;
+		background-color: rgb(51, 51, 51);
+		transition: 0.4s;
+		cursor: pointer;
+		.product-form__icon-wrapper:after {
+			transition: 0.4s;
+			position: absolute; 
+		    content: ''; 
+		    display: block; 
+		    top: 0; 
+		    left: 0; 
+		    height: 100%; 
+		    width: 100%;
+		    background: rgba(0, 0, 0, 0.85);
+		}
+		.product-form__hover-info {
+			transition: 0.4s;
+			color: white;
+			opacity: 1;
+		}
+	}	
+	.product-form__icon-wrapper {
+		position: relative;
+		width: 400px;
+		height: 527px;
+		overflow: hidden;
+			&:after{
+				position: absolute; 
+			    content: ''; 
+			    display: block; 
+			    top: 0; 
+			    left: 0; 
+			    height: 100%; 
+			    width: 100%;
+				background: rgba(0, 0, 0, 0);
+			}
+	
+	}
+	.product-form__title {
+		font-family: "PT";
+		font-size: 24px;
+		font-weight: 600;
+		letter-spacing: 2px;	
+		margin-top: 13px;	
+		padding-left: 3px;
+	}
+	.product-form__description {
+		margin-top: 8px;
+		padding-left: 3px;
+		font-size: 16px;
+		line-height: 20px;
+
+	}
+	.product-form__info {
+		padding: 0 24px 0 3px;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+		.product-form__size {
+			.size__container {
+				display: flex;
+				.size__value {
+					width: 46px;
+					height: 18px;
+					margin-right: 5px;			
+					line-height: 15px;
+					font-weight: 600;
+					box-sizing: border-box;
+					text-align: center;
+					border: 1px solid rgb(239, 127, 26);
+					border-radius: 3px;
+					color: rgb(239, 127, 26);
+				}	
+			}
+
+			.size__text {
+				margin-top: 4px;
+				font-family: "PT";
+				font-size: 18px;
+				letter-spacing: 1.8px;
+				text-transform: uppercase;
+				
+			}
+		}
+		.product-form__cost {
+			font-family: "PT";
+			font-weight: 600;
+			font-size: 35px;
+			letter-spacing: 3px;
+			.product-form__order {
+				margin-bottom: 3px;
+				margin-left: 14px;
+			}
+		}
+	}
+	.product-form__stocks {
+		position: absolute;
+		top: 46px;
+		left: 22px;
+		.product-form__flag {
+			width: 18px;
+			height: 12px;
+		}
+		.product-form__stocks-text {
+			height: 17px;
+			margin-top: 15px;
+			margin-left: -2px;
+			background-color: black;
+			color: white;
+			border-radius: 4px;
+			font-weight: 600;
+			line-height: 13px;
+			padding: 0 8px 0px 8px;
+		}
+	}
+	.product-form__hover-info {
+		opacity: 0;
+		position: absolute;
+		top: 94px;
+		width: 400px;
+		border-collapse: collapse;
+		.hover-info-tr {
+			height: 39px;
+			border: 1px solid white;
+			.hover-info-tr-td {
+				border: 1px solid white;
+				&:nth-child(1) {
+					padding-left: 9px;
+					text-align: left;
+					width: 50%;
+				}
+				&:nth-child(2) {
+					padding-right: 14px;
+					text-align: right;
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.offers__item {
+		width: 100%;
+		padding:0px;
+		.product-form__hover-info {
+			width: 100%;
+		}
+	}
+	.product-form {
+		width: 100%;
+	}
+}

@@ -1,0 +1,34 @@
+@import "fonts/index";
+.header, .carousel, .menu {
+  font-family: "PT";
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+	&:hover {
+		cursor: pointer;
+		color: rgb(239, 127, 26);
+		transition: 0.2s;
+	}
+}
+
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
+.wrapper {
+  margin: auto;
+  width: 87%;
+  overflow: hidden;
+}
+
+@media (max-width: 639px) {
+	.wrapper {
+		width: 100%;
+	}
+}

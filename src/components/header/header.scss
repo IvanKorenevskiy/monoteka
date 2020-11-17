@@ -1,0 +1,118 @@
+.header {
+	display: block;
+	.header__media-hide {
+		position: relative;
+		width: 100%;
+		padding: 24px 0 24px 0;
+		justify-content: space-between;
+		align-items: center;	
+		display: flex;
+		.header__catalog {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 17px 0 25px;
+			box-sizing: border-box;
+			width: 152px;
+			height: 40px;
+			align-items: center;
+			background-color: rgb(239, 127, 26);
+			color: white;
+			font-size: 19px;
+		}
+		.header__tool {	
+		margin-top: 6px;	
+		}
+		.header__left-nav {
+			height: 40px;
+			flex: 1;
+			font-size: 24px;
+			letter-spacing: 2.2px;
+			line-height: 1.6em;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: flex-start;
+			.header__item {
+				margin-right: 12%;
+				&:last-child {
+					margin-right: 0px;
+				}
+			}
+		}
+		.header__right-nav {
+			height: 40px;
+			flex: 1;
+			font-size: 24px;
+			letter-spacing: 2.2px;
+			line-height: 1.6em;
+			text-transform: uppercase;		
+			display: flex;
+			justify-content: flex-end;
+			.header__item {
+				margin-right: 7.2%;			
+				&:nth-child(5) {
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+	.header__media-show {
+		display: none;	
+		justify-content: space-between;
+		font-size: 18px;
+		letter-spacing: 2.2px;
+		line-height: 1.6em;
+		text-transform: uppercase;
+		width: 100%;	
+		top:80px;
+	}
+}
+@media (max-width: 1279px) {
+	.header {
+		
+		.header__left-nav {
+			.header__item {
+				&:nth-child(2), &:nth-child(3){
+					display: none;
+				}
+			}
+		}
+		.header__right-nav {
+			.header__item {
+				&:nth-child(1), &:nth-child(2), &:nth-child(3){
+					display: none;
+				}
+			}
+		}
+		.header__media-show {
+			display: flex;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.header {
+		.header__media-show {
+			display: block !important;
+			text-align: center;
+			font-size: 40px;
+			height: 70px;
+			overflow: scroll;
+		}
+		.header__item {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.header__catalog {
+		width: 30px !important;
+		color: rgb(239, 127, 26) !important;
+		overflow: hidden;
+		
+		.header__arrow {
+			position: absolute;
+			left: 15px;
+		}
+	}	
+}
